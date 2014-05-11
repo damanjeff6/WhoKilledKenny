@@ -1,0 +1,151 @@
+/* still need to make everything center on screen */
+
+
+html, ul, li, p, figure, div, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: arial;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  margin: 20px 40px;
+}
+
+h5 {
+  margin: 20px 40px;
+}
+
+/* --- Helper methods (clearfix) --- */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.list-wrapper {
+  margin: auto;
+  min-height: 220px;
+}
+
+.characters {
+  margin: 20px 30px;
+  text-align: center;
+}
+
+/* make all images dark on hover*/
+.characters:hover > li{
+  opacity: .5;
+}
+
+/* make current image not dark on hover*/
+.characters:hover > li:hover{
+  opacity: 1;
+}
+
+.characters li{
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.characters li p {
+  text-align: center;
+  color: black;
+}
+
+.characters li figure {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid black;
+}
+
+.stan{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') 0 0;
+}
+
+.kyle{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') -207px 0;
+}
+
+.kenny{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') -619px 0;
+}
+
+.cartman{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') -310px 0;
+}
+
+.wendy{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') -413px 0;
+}
+
+.ike{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') -517px 0;
+}
+
+.tweek{
+  width: 100px;
+  height: 150px;
+  background: url('characters-sprite.png') -105px 0;
+}
+
+.line-separator{
+  margin: 20px 40px;
+  border-bottom: 3px solid white;
+}
+
+.reset-button{
+  float: right;
+  padding: 10px;
+  margin: 10px;
+  background-color: grey;
+  border-radius: 5px;
+  clear: left;
+}
+
+.save-button{
+  float: right;
+  padding: 10px;
+  margin: 10px 40px 10px 0px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+.reset-button:hover{
+  color: yellow;
+}
+
+/* need to add gradient background */
+.save-button:hover{
+  color: yellow;
+}

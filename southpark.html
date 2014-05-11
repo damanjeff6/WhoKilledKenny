@@ -1,0 +1,89 @@
+<html>
+
+<head>
+
+	<title>Who Killed Kenny?</title>
+
+  <link rel="stylesheet" href="southpark.css" type="text/css">
+	<script src="jquery-1.9.1.min.js"></script>
+
+</head>
+
+
+<body>
+
+<h1>Who killed Kenny?</h1>
+<h5>Here are the suspects. Your job is to sort them from who you think is the most likely to the least likely by clicking on the suspect</h5>
+
+<div class="list-wrapper group">
+  <ul id="selections" class="characters">
+    <li>
+      <figure class="stan"></figure>
+      <p>Stan</p>
+    </li>
+    <li>
+      <figure class="kyle"></figure>
+      <p>Kyle</p>
+    </li>
+    <li>
+      <figure class="kenny"></figure>
+      <p>Kenny</p>
+    </li>
+    <li>
+      <figure class="cartman"></figure>
+      <p>Cartman</p>
+    </li>
+    <li>
+      <figure class="wendy"></figure>
+      <p>Wendy</p>
+    </li>
+    <li>
+      <figure class="ike"></figure>
+      <p>Ike</p>
+    </li>
+    <li>
+      <figure class="tweek"></figure>
+      <p>Tweek</p>
+    </li>
+  </ul>
+</div>
+
+<div class="line-separator"></div>
+
+<div class="list-wrapper group">
+  <ul id="picked" class="characters">
+  </ul>
+</div>
+
+<!-- <button class="save-button">Save</button> -->
+<button class="reset-button">Reset</button>
+
+  <script>
+    $(document).ready(function(){
+      //saving the original list
+      var all_chars = $("#selections li")
+      
+      //adding click handlers
+      addclick();
+      
+      //adding reset click handler
+      $(".reset-button").on('click', function(){
+        $(".characters li").remove();
+        $("#selections").append(all_chars);
+        addclick();
+      })
+    });
+    
+    //click handlers to characters
+    var addclick = function(){
+      $(".characters li").on('click', function(){
+        var person = this;
+        $(this).remove();
+        $("#picked").append(this);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
