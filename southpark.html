@@ -63,25 +63,34 @@
       //saving the original list
       var all_chars = $("#selections li")
       
-      //adding click handlers
-      addclick();
+      //adding click handlers to all characters
+      selection_click(all_chars);
       
       //adding reset click handler
       $(".reset-button").on('click', function(){
         $(".characters li").remove();
         $("#selections").append(all_chars);
-        addclick();
+        selection_click(all_chars);
       })
     });
     
-    //click handlers to characters
-    var addclick = function(){
-      $(".characters li").on('click', function(){
-        var person = this;
+    //click handlers for top chars
+    var selection_click = function(selection_char){
+      $(selection_char).on('click', function(){
         $(this).remove();
         $("#picked").append(this);
+        pick_click(this);
       });
     }
+    
+    //click handlers for bottom chars
+    var pick_click = function(picked_char){
+      $(picked_char).on('click', function(){
+        $(this).remove();
+        $("#selections").append(this);
+        selection_click(this);
+      });
+    };
   </script>
 
 </body>
