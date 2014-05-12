@@ -6,7 +6,6 @@
 
   <link rel="stylesheet" href="southpark.css" type="text/css">
 	<script src="jquery-1.9.1.min.js"></script>
-
 </head>
 
 
@@ -61,7 +60,7 @@
   <script>
     $(document).ready(function(){
       //saving the original list
-      var all_chars = $("#selections li")
+      var all_chars = $("#selections li");
       
       //adding click handlers to all characters
       selection_click(all_chars);
@@ -71,7 +70,7 @@
         $(".characters li").remove();
         $("#selections").append(all_chars);
         selection_click(all_chars);
-      })
+      });
     });
     
     //click handlers for top chars
@@ -81,7 +80,7 @@
         $("#picked").append(this);
         pick_click(this);
       });
-    }
+    };
     
     //click handlers for bottom chars
     var pick_click = function(picked_char){
