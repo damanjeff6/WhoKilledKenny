@@ -11,3 +11,4 @@ Technologies used:
 - HTML5
 - jQuery/javascript
 - sprite use
+- test
